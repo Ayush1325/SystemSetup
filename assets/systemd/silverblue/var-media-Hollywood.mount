@@ -1,0 +1,11 @@
+[Unit]
+Description=Hardrive 2T
+
+[Mount]
+What=/dev/disk/by-uuid/1856b6b3-9b82-4440-b5fc-86562578fd13
+Where=/var/media/Hollywood
+Type=btrfs
+Options=rw,nofail,noatime,compress=zstd:3,nossd,space_cache=v2,subvol=@videos/hollywood
+
+[Install]
+WantedBy=multi-user.target
